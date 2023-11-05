@@ -26,5 +26,8 @@ all: $(FILES)
 
 clean:
 	-rm $(FILES) *~
+	
+clean_temp_folders:
+	rm -rf tex2pdf.*  # Удалить все папки, начинающиеся с "tex2pdf."
 
-cleanall: clean
+cleanall: clean clean_temp_folders
